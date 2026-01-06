@@ -12,7 +12,7 @@ schema_version: 1
 
 context:
   name: cppad-mixed
-  version: "2025.0.3"
+  version: "2026.0.0"
 
 package:
   name: ${{ name }}
@@ -20,7 +20,7 @@ package:
 
 source:
   url: https://github.com/bradbell/cppad_mixed/archive/${{ version }}.tar.gz
-  sha256: 36fbb604f3e0598d6ac8879d97fe0a3cc60e56847807d2a613a3c16f5ade5e72
+  sha256: f1a98bc2457ca3c31a7f8a51d0556170b40b1d4b8e79fda8eca7ea2194a0811b
 
 build:
   # build number starts at zero for each new version
