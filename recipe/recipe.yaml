@@ -24,7 +24,7 @@ source:
 
 build:
   # build number starts at zero for each new version
-  number: 0
+  number: 1
 
 requirements:
   build:
