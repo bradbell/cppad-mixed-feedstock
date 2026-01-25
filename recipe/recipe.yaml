@@ -36,8 +36,8 @@ requirements:
     - ${{ compiler('cxx') }}
     - cmake
     - make
-  host:
     - pkg-config
+  host:
     - eigen
     - cppad
     - gsl
