@@ -21,10 +21,13 @@ package:
 source:
   url: https://github.com/bradbell/cppad_mixed/archive/${{ version }}.tar.gz
   sha256: f1a98bc2457ca3c31a7f8a51d0556170b40b1d4b8e79fda8eca7ea2194a0811b
+  patches:
+    # patches for this version.
+    - ${{ version }}.patch
 
 build:
   # build number starts at zero for each new version
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -33,8 +36,8 @@ requirements:
     - ${{ compiler('cxx') }}
     - cmake
     - make
-  host:
     - pkg-config
+  host:
     - eigen
     - cppad
     - gsl

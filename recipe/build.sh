@@ -15,7 +15,7 @@ extra_cxx_flags+=' -Wno-sign-conversion'
 mkdir build && cd build
 #
 # cmake
-cmake -S $SRC_DIR -B . \
+cmake ${CMAKE_ARGS} -S $SRC_DIR -B . \
    -G 'Unix Makefiles' \
    -D CMAKE_BUILD_TYPE=Release \
    -D extra_cxx_flags="$extra_cxx_flags" \
@@ -26,7 +26,8 @@ cmake -S $SRC_DIR -B . \
    -D for_hes_sparsity=yes 
 #
 # check
-make -j$CPU_COUNT check
+# can't do make check during build becasue osx-arm64 is cross compiled
+# make -j$CPU_COUNT check
 #
 # install
 make -j$CPU_COUNT install
