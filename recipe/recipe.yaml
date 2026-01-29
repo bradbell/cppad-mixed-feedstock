@@ -29,7 +29,7 @@ build:
   # build number starts at zero for each new version
   number: 2
   skip:
-    - arm64
+    - "osx and arm64"
   script:
     - if: win
       then:
